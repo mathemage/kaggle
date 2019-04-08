@@ -1,4 +1,7 @@
 import keras as K
+import numpy as np
+
+dataset = np.loadtxt("train.csv", delimiter=",", skiprows=1)
 
 # hyperparameters
 input_dim = None  # TODO
