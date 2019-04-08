@@ -16,3 +16,9 @@ model.compile(loss=K.losses.categorical_crossentropy, optimizer=K.optimizers.Ada
 
 # train: x_train and y_train are Numpy arrays
 model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size)  # TODO
+
+# evaluate: dev set
+loss_and_metrics_dev = model.evaluate(x_dev, y_dev, batch_size=batch_size)
+
+# evaluate: test set
+loss_and_metrics_test = model.evaluate(x_test, y_test, batch_size=batch_size)
