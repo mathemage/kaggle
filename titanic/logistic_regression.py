@@ -1,7 +1,17 @@
 import keras as K
 import numpy as np
 
+# datasets
 dataset = np.loadtxt("train.csv", delimiter=",", skiprows=1)
+
+# TODO
+x_train = None
+y_train = None
+x_dev = None
+y_dev = None
+x_test = None
+y_test = None
+x_predict = None
 
 # hyperparameters
 input_dim = None  # TODO
