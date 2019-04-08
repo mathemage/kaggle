@@ -22,3 +22,6 @@ loss_and_metrics_dev = model.evaluate(x_dev, y_dev, batch_size=batch_size)
 
 # evaluate: test set
 loss_and_metrics_test = model.evaluate(x_test, y_test, batch_size=batch_size)
+
+# predict
+classes = model.predict(x_predict, batch_size=batch_size)
