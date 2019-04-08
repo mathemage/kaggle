@@ -11,6 +11,8 @@ x_dev = None
 y_dev = None
 x_test = None
 y_test = None
+
+dataset_predict = np.loadtxt("test.csv", delimiter=",", skiprows=1)
 x_predict = None
 
 # hyperparameters
