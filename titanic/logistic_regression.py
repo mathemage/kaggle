@@ -1,12 +1,16 @@
 import keras as K
 import numpy as np
+import pandas as pd
 
 # datasets
-feature_cols = (2, 4, 5, 6, 7, 9, 11)  # "Pclass", "Sex", "Age", "SibSp", "Parch", "Fare", "Embarked"
-label_cols = (1,)  # "Survived"
-dataset = np.loadtxt("train.csv", delimiter=",", skiprows=1, usecols=feature_cols + label_cols)
-X = dataset[:, :-1]
-Y = dataset[:, -1]
+feature_cols = [2, 4, 5, 6, 7, 9, 11]  # "Pclass", "Sex", "Age", "SibSp", "Parch", "Fare", "Embarked"
+label_cols = [1]  # "Survived"
+dataset = pd.read_csv("train.csv", quotechar='"', skipinitialspace=True, usecols=feature_cols + label_cols)
+if __debug__:
+	print(dataset)
+# X = dataset[:, :-1]
+# Y = dataset[:, -1]
+# print("X: {}".format(X))
 
 # TODO
 x_train = None
