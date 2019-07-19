@@ -7,7 +7,7 @@ feature_cols = [2, 4, 5, 6, 7, 9, 11]  # "Pclass", "Sex", "Age", "SibSp", "Parch
 label_cols = [1]  # "Survived"
 dataset = pd.read_csv("train.csv", quotechar='"', skipinitialspace=True, usecols=feature_cols + label_cols)
 if __debug__:
-	print(dataset)
+    print(dataset)
 # X = dataset[:, :-1]
 # Y = dataset[:, -1]
 # print("X: {}".format(X))
