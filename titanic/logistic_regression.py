@@ -8,8 +8,8 @@ target_column = [1]  # "Survived"
 dataset = pd.read_csv("train.csv", quotechar='"', skipinitialspace=True, usecols=feature_columns + target_column)
 if __debug__:
     print(dataset)
-X = dataset.iloc[:, :-1]
-Y = dataset.iloc[:, -1]
+X = dataset.iloc[:, 1:]
+Y = dataset.iloc[:, :1]
 print("X: {}".format(X))
 print("Y: {}".format(Y))
 
